@@ -11,7 +11,8 @@ const PORT = 4000
 mongoose.Promise = global.Promise
 mongoose.connect('mongodb://localhost/soccerDB', {
   useNewUrlParser: true,
-  useUnifiedTopology: true
+  useUnifiedTopology: true,
+  useFindAndModify: false
 })
 
 // bodyParser setup
