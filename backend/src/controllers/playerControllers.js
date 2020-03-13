@@ -34,3 +34,18 @@ export const getPlayerWithID = (req, res) => {
     res.json(Player)
   })
 }
+
+export const updatePlayer = (req, res) => {
+  Player.findOneAndUpdate(
+    { _id: req.params.playerId },
+    req.body,
+    { new: true },
+    (err, Player) => {
+      if (err) {
+        res.send(err)
+      }
+
+      res.json(Player)
+    }
+  )
+}
