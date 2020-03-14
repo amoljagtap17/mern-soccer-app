@@ -22,6 +22,8 @@ export const PlayerForm = () => {
         'http://localhost:4000/players',
         formData
       )
+
+      console.log('response', response.data)
     } catch (error) {
       console.log('error', error)
     }
